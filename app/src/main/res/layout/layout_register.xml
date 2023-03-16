@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.esercitazioneBonusIUM.RegisterActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/registration_bk">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/loginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:gravity="center"
+                android:text="Registrati" />
+
+            <TextView
+                android:id="@+id/registerErrore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/newsMoreTextSize"
+                android:paddingHorizontal="20dp"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:textSize="28dp"
+                android:textAllCaps="true"
+                android:background="@color/red"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutUsername"
+                style="@style/parent"
+                android:autofillHints="username"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/registerUsername"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/login_username_hint"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="1"
+                    android:autofillHints="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPassword"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                app:passwordToggleEnabled="false"
+
+                app:helperText="@string/proprietà_password"
+                app:helperTextEnabled="false">
+
+                <EditText
+                    android:id="@+id/registerPassword"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/login_password_hint"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRepeatPassword"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                app:passwordToggleEnabled="false">
+
+                <EditText
+                    android:id="@+id/registerRepeatPassword"
+                    style="@style/modifiedEditText"
+                    android:hint="Ripeti la password"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textIndirizzo"
+                style="@style/parent"
+                android:autofillHints="username"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/Residenza"
+                    style="@style/modifiedEditText"
+                    android:hint="Città di Residenza"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="1"
+                    android:autofillHints="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDataNascita"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_marginBottom="30dp"
+                app:helperText="Inserisci la data nel formato gg/mm/aaaa">
+                <EditText
+                    android:id="@+id/dataDiNascita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Inserisci la tua data di nascita"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:textSize="19sp"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/registerButton"
+                style="@style/loginButton"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="80dp"
+                android:text="Registrati" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

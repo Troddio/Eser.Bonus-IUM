@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.esercitazioneBonusIUM.LoginActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bk"
+    app:layout_constraintStart_toStartOf="parent"
+    >
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="80dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="40dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/loginHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Login"
+           />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></Space>
+    <TextView
+        android:id="@+id/loginErrore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/newsMoreTextSize"
+        android:paddingHorizontal="20dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:textSize="28dp"
+        android:textAllCaps="true"
+        android:background="@color/red"
+        android:text="Loggin fallito l'utente non esiste"
+        android:visibility="gone"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputUsername"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:autofillHints="username">
+
+
+        <EditText
+            android:id="@+id/loginUsername"
+            style="@style/modifiedEditText"
+            android:hint="@string/login_username_hint"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        app:passwordToggleEnabled="false"
+        app:helperTextTextColor="@color/red">
+
+        <EditText
+            android:id="@+id/loginPassword"
+            style="@style/modifiedEditText"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/toHome"
+        style="@style/loginButton"
+        android:text="Accedi"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:clickable="false"/>
+
+    <Button
+        android:id="@+id/nonRegistrato"
+        style="@style/parent"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        android:text="@string/login_signup_hint"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:layout_marginBottom="20dp"
+        />
+
+
+</LinearLayout>
+</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>

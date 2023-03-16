@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/user_home_bk"
+    tools:context="com.example.esercitazioneBonusIUM.UserHomeActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/loginHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:gravity="center"
+            android:text="Home" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></Space>
+
+        <TextView
+            android:id="@+id/userWelcome"
+            style="@style/headerText"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Benvenuto Matteo!"
+            android:textColor="@color/blackTextColor">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imgUtente"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                    tools:srcCompat="@drawable/foto_default" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/aggiungiFoto"
+                android:layout_width="59dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="130dp"
+                android:layout_marginEnd="155dp"
+                android:clickable="true"
+                android:padding="5dp"
+                app:elevation="6dp"
+                app:srcCompat="@drawable/ic_photo_camera_black_48dp" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></Space>
+
+        <TextView
+            android:id="@+id/usernameHome"
+            style="@style/dataUser"
+            android:text="Username:"
+            android:textColor="@color/blackTextColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/userPassword"
+            style="@style/dataUser"
+            android:text="Password:"
+            android:textColor="@color/blackTextColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/userCitta"
+            style="@style/dataUser"
+            android:text="Città:"
+            android:textColor="@color/blackTextColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/userData"
+            style="@style/dataUser"
+            android:text="Data di nascita:"
+            android:textColor="@color/blackTextColor"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/modificaPasswordUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="5dp"
+            android:text="modifica password"
+            android:textColor="#004AFF"
+            android:textSize="14sp" />
+        <!--
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:switchMinWidth="56dp"
+                android:text="Switch1:"
+                android:textOff="OFF"
+                android:textOn="ON" />
+-->
+
+        <Button
+            android:id="@+id/logoutButton"
+            style="@style/logoutButton"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:layout_marginBottom="45dp"
+            android:text="Logout"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

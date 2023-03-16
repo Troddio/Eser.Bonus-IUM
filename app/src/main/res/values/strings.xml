@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ProgettoIUM</string>
+
+    <string name="registrati">REGISTRATI</string>
+    <string name="login_username_hint">Inserisci l\'username</string>
+    <string name="login_password_hint">Inserisci la Password</string>
+    <string name="signup_login_hint">Hai gia\' un account? Accedi!</string>
+    <string name="login_signup_hint">Non hai ancora un\'account? Registrati!</string>
+    <string name="login_indirizzo_hint"><u>Città di Residenza</u></string>
+    <string name="fake_description">Il parcheggio è ampio e gratis, non ho avuto difficoltà a trovare uno stallo libero. Per quanto riguarda la sicurezza è molto tranquillo e lo consiglio anche a gli altri utenti</string>
+    <string name="proprietà_password">la password deve essere composta da almeno 8 caratteri e contenere almeno una lettera minuscola, maiuscola, un numero e un carattere speciale.</string>
+    <string name="tutorial1_Search">Qui puoi cambiare i privilegi di utente o admin.</string>
+    <string name="tutorial2_Search">Se vuoi vedere tutti gli utenti avvia la ricerca con la barra vuota o se hai già cercato un\'utente svuota la barra di ricerca </string>
+</resources>
